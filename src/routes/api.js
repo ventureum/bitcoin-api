@@ -99,7 +99,7 @@ router.get('/:network/getrawtransaction/:blockhash/:id', (req, res) => {
     jsonrpc: '1.0',
     id: 'curltext',
     method: 'getrawtransaction',
-    params: [req.params.id, false, req.params.blockhash]
+    params: [req.params.id, true, req.params.blockhash]
   }
   var dataString = JSON.stringify(data)
   getData(req.params.network, dataString, res)
